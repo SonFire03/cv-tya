@@ -31,8 +31,10 @@ header {
   object-fit: cover;
   margin: 10px auto;
   display: block;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 3px solid #ff69b4;
 }
+
 
 .typing {
   font-size: 1.6em;
@@ -163,7 +165,8 @@ body.light-mode .cv-button {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
-  margin-top: 10px;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 .education {
