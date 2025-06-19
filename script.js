@@ -18,3 +18,8 @@ const toggleBtn = document.getElementById('themeToggle');
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Merci ! Ton message a été envoyer avec succès 🪄✨");
+  this.reset();
+});

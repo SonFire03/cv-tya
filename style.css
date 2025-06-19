@@ -209,3 +209,53 @@ body.light-mode .cv-button {
   transform: scale(1.2);
 }
 
+.contact {
+  margin-bottom: 40px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff69b4;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+body.light-mode #contact-form input,
+body.light-mode #contact-form textarea {
+  background: #fff;
+  color: #000;
+}
+
+#contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff69b4, #ff4081);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 64, 129, 0.5);
+}
