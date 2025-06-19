@@ -5,45 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tya Garnier - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
-  <img src="assets/profile.jpg" alt="Photo de Tya">
-  <h1>Tya Garnier</h1>
-</header>
+      <div class="card-flip">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="assets/profile.jpg" alt="Photo de Tya" />
+            <h1 class="typing">Bienvenue sur le portfolio de Tya Garnier</h1>
+          </div>
+          <div class="card-back">
+            <p>Tya Garnier</p>
+            <p>Téléphone : 06 72 25 49 90</p>
+            <p>Email : garniertya8@gmail.com</p>
+            <p>Adresse : 77000, Melun</p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>📞 06 72 25 49 90</p>
-      <p>📧 garniertya8@gmail.com</p>
-      <p>📍 77000, Melun</p>
-    </section>
-
-    <section class="education">
-      <h2>Parcours</h2>
-      <ul>
-        <li>Contrat d’Engagement Jeune – Mission Emploi et Insertion, LA ROCHETTE (77), avril 2025</li>
-        <li>Baccalauréat Professionnel Gestion Administration – Lycée Jacques Prévert, COMBS-LA-VILLE (77), obtenu en 2021</li>
-      </ul>
-    </section>
-
-    <section class="experience">
+    <section class="timeline">
       <h2>Expériences</h2>
-      <ul>
-        <li><strong>Baby-sitter régulière</strong> – Melun (77), Janvier 2024 - Juillet 2024</li>
-        <li><strong>Employée polyvalente</strong> – NORMAL, Melun (77), Février 2024</li>
-        <li><strong>Employée polyvalente</strong> – McDonald’s, Sens (89), Juin 2023 - Janvier 2024</li>
-        <li><strong>Employée polyvalente</strong> – NORMAL, Lieusaint (77), Juillet 2022</li>
-        <li><strong>Vendeuse polyvalente</strong> – La Maison des Pains, Vert-Saint-Denis (77), Octobre 2021 - Avril 2022</li>
-        <li><strong>Stage – Secrétaire urbanisme</strong> – Mairie, Le Mée-sur-Seine (77), Février 2020  
-          
-        </li>
-        <li><strong>Stage – Secrétaire coordinatrice de centre</strong> – GRETA MTE, Combs-la-Ville (77), Avril 2019 & Mai 2021  
-          
-        </li>
-      </ul>
+      <div class="timeline-container">
+        <div class="timeline-item"><h3>Baby-sitter – Melun</h3><span>Janv. 2024 - Juil. 2024</span></div>
+        <div class="timeline-item"><h3>Normal – Melun</h3><span>Févr. 2024</span></div>
+        <div class="timeline-item"><h3>McDonald's – Sens</h3><span>Juin 2023 - Janv. 2024</span></div>
+        <div class="timeline-item"><h3>Normal – Lieusaint</h3><span>Juil. 2022</span></div>
+        <div class="timeline-item"><h3>Maison des Pains – Vert-Saint-Denis</h3><span>Oct. 2021 - Avr. 2022</span></div>
+      </div>
     </section>
 
     <section class="skills">
@@ -79,13 +70,34 @@
         <li>Crochet</li>
       </ul>
     </section>
-<a class="cv-button" href="assets/CV_Tya.pdf" download>Télécharger le CV de Tya</a>
+
+   <section class="map">
+  <h2>Localisation</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36266.07843453169!2d2.634646079341724!3d48.54213516261019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5fa62379c029f%3A0x40b82c3688c5450!2s77000%20Melun!5e1!3m2!1sfr!2sfr!4v1750369841607!5m2!1sfr!2sfr" 
+    width="100%" 
+    height="300" 
+    style="border:0; border-radius: 10px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  
+</section>
+<a class="cv-button" href="assets/CV_admin_pdf_20240313_164449_0000_pdf_20240809_163016_0000_pdf_20250613.pdf" download>
+  📄 Télécharger le CV de Tya
+</a>
+    <section class="qrcode">
+      <h2>Accès rapide</h2>
+      <img src="assets/qrcode_cv_tya.png" alt="QR Code vers le site" style="max-width:150px;">
+    </section>
+
+    
+
 
     <footer>
       <p>&copy; 2025 - Tya Garnier</p>
     </footer>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
