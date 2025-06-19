@@ -23,3 +23,4 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   alert("Merci ! Ton message a été envoyer avec succès 🪄✨");
   this.reset();
 });
+
