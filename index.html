@@ -200,21 +200,27 @@ const commands = {
   clear: ""
 };
 
-terminalInput.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    const input = terminalInput.value.trim().toLowerCase();
-    terminalOutput.innerHTML += "\n$ " + input;
-    if (input in commands) {
-      if (input === "clear") {
-        terminalOutput.innerHTML = "";
-      } else {
-        terminalOutput.innerHTML += "\n" + commands[input];
-      }
+
+function executeCommand() {
+  const input = terminalInput.value.trim().toLowerCase();
+  terminalOutput.innerHTML += "\n$ " + input;
+  if (input in commands) {
+    if (input === "clear") {
+      terminalOutput.innerHTML = "";
     } else {
-      terminalOutput.innerHTML += `\nCommande inconnue : ${input}`;
+      terminalOutput.innerHTML += "\n" + commands[input];
     }
-    terminalOutput.scrollTop = terminalOutput.scrollHeight;
-    terminalInput.value = "";
+  } else {
+    terminalOutput.innerHTML += `\nCommande inconnue : ${input}`;
+  }
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  terminalInput.value = "";
+}
+
+terminalInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" || e.key === "Tab") {
+    e.preventDefault(); // Évite que tab change de champ
+    executeCommand();
   }
 });
 </script>
