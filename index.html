@@ -9,6 +9,10 @@
 </head>
 <body>
 
+<div id="loader-wrapper">
+  <div id="loader"></div>
+</div>
+
   <div class="container">
     <header>
       <img src="assets/profile.jpg" alt="Photo de Tya" class="photo-profil" />
@@ -107,15 +111,11 @@
   </form>
 </section>
 
-
-
-
     <section class="qrcode">
       <h2>Accès rapide pour la prochaine fois</h2>
       <img src="assets/qrcode_cv_tya.png" alt="QR Code vers le site" style="max-width:150px;">
     </section>
 
-    
     <footer>
       <p>&copy; 2025 - Tya Garnier</p>
         <p style="font-size: 1px; color: #111;">Site créé par Sofiane Dehimi</p>
@@ -138,8 +138,15 @@
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-
-<div class="bubble-background" id="bubbles"></div>
+<script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader-wrapper');
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.style.display = 'none', 500);
+    }, 3000); // 3 secondes avant de cacher
+  });
+</script>
 
 
 </body>
