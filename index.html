@@ -112,6 +112,19 @@
 </section>
 
 
+
+<section class="terminal-section">
+  <div class="terminal">
+    <div class="terminal-output" id="terminalOutput">Bienvenue dans le terminal de Tya ✨<br>Tapez <code>help</code> pour voir les commandes dispo.</div>
+    <div class="terminal-input">
+      <span class="prompt">$</span>
+      <input type="text" id="terminalInput" placeholder="Tapez une commande..." autocomplete="off" />
+    </div>
+  </div>
+</section>
+
+
+
 <div class="secret-access">
   <h2>🔐 Accès secret</h2>
   <p>Réponds à la question pour découvrir un contenu caché :</p>
@@ -174,6 +187,38 @@
     }, 2000); // 3 secondes avant de cacher
   });
 </script>
+
+<script>
+const terminalInput = document.getElementById("terminalInput");
+const terminalOutput = document.getElementById("terminalOutput");
+
+const commands = {
+  help: "Commandes disponibles : personne, contact, loisirs, clear",
+  personne: "Tya Garnier — Dynamique, rigoureuse, accueillante.",
+  contact: "📞 06 72 25 49 90 | 📧 garniertya8@gmail.com",
+  loisirs: "🎵 Musique | 📚 Lecture | 🍳 Cuisine | 🧶 Crochet",
+  clear: ""
+};
+
+terminalInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    const input = terminalInput.value.trim().toLowerCase();
+    terminalOutput.innerHTML += "\n$ " + input;
+    if (input in commands) {
+      if (input === "clear") {
+        terminalOutput.innerHTML = "";
+      } else {
+        terminalOutput.innerHTML += "\n" + commands[input];
+      }
+    } else {
+      terminalOutput.innerHTML += `\nCommande inconnue : ${input}`;
+    }
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    terminalInput.value = "";
+  }
+});
+</script>
+
 
 <button id="backToTop" title="Revenir en haut">⬆️</button>
 

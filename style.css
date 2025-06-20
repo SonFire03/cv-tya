@@ -356,3 +356,45 @@ body.light-mode #contact-form textarea {
   transform: scale(1.1);
   background-color: #ff4081;
 }
+.terminal-section {
+  margin: 40px auto;
+  max-width: 700px;
+  background: #1e1e1e;
+  color: #00ffcc;
+  font-family: monospace;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,255,204,0.2);
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  min-height: 150px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.terminal-input {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-input .prompt {
+  margin-right: 6px;
+}
+
+.terminal-input input {
+  background: transparent;
+  border: none;
+  color: #00ffcc;
+  font-family: monospace;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
