@@ -111,10 +111,40 @@
   </form>
 </section>
 
+
+<div class="secret-access">
+  <h2>🔐 Accès secret</h2>
+  <p>Réponds à la question pour découvrir un contenu caché :</p>
+  <input type="text" id="secretAnswer" placeholder="Nom de la première entreprise...">
+  <button onclick="checkSecret()">Déverrouiller</button>
+  <p id="secretFeedback"></p>
+</div>
+
+<script>
+  function checkSecret() {
+    const input = document.getElementById('secretAnswer').value.trim().toLowerCase();
+    const feedback = document.getElementById('secretFeedback');
+
+    if (input === "maison des pain" || input === "Maison Des Pains" || input === "maison des pains") {
+      feedback.textContent = "✅ Accès autorisé ! Redirection...";
+      feedback.style.color = "lime";
+      setTimeout(() => {
+        window.location.href = "secret.html"; // page cachée à créer
+      }, 1500);
+    } else {
+      feedback.textContent = "❌ Mauvaise réponse.";
+      feedback.style.color = "crimson";
+    }
+  }
+</script>
+
     <section class="qrcode">
       <h2>Accès rapide pour la prochaine fois</h2>
       <img src="assets/qrcode_cv_tya.png" alt="QR Code vers le site" style="max-width:150px;">
     </section>
+
+
+
 
     <footer>
       <p>&copy; 2025 - Tya Garnier</p>
