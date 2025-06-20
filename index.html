@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+<div class="bubble-container"></div>
+
 <body>
 
    
@@ -143,6 +145,35 @@
 
 <div class="bubble-background" id="bubbles"></div>
 
+<script>
+  function createBubble() {
+    const container = document.querySelector('.bubble-container');
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+
+    // Position aléatoire sur la largeur
+    bubble.style.left = Math.random() * 100 + 'vw';
+
+    // Taille aléatoire
+    const size = Math.random() * 20 + 10;
+    bubble.style.width = size + 'px';
+    bubble.style.height = size + 'px';
+
+    // Durée aléatoire
+    const duration = Math.random() * 3 + 4;
+    bubble.style.animationDuration = duration + 's';
+
+    container.appendChild(bubble);
+
+    // Supprimer la bulle après l'animation
+    setTimeout(() => {
+      bubble.remove();
+    }, duration * 1000);
+  }
+
+  // Générer une bulle toutes les 400ms
+  setInterval(createBubble, 400);
+</script>
 
 </body>
 </html>
